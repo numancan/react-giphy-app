@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Livvic:400,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  background: #212121;
+  color: wheat;
+  font-family: 'Livvic', sans-serif;
+}
+
+input::placeholder {
+  font-family: 'Livvic', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1440px;
+  margin: 25px auto;
+}
+
+/* ----SEARCH BAR---- */
+.search-bar {
+  text-align: center;
+  height: 30px;
+  margin-bottom: 100px;
+}
+
+.search-bar input {
+  height: 100%;
+  width: 50%;
+  padding: 5px;
+  color: whitesmoke;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid wheat;
+}
+
+.search-bar button {
+  height: 100%;
+  padding: 0 10px;
+  margin-left: 5px;
+  border: 0;
+  background: transparent;
+  color: wheat;
+  cursor: pointer;
+}
+
+/* ----Gif List---- */
+.gif-list {
+  columns: 200px;
+}
+
+.gif {
+  padding: 3%;
+  display: inline-block;
+  margin: 10px 0;
+  border: 1px solid rgba(245, 222, 179, 0.2);
+}
+
+.gif img[alt='gif'] {
+  width: 200px;
+  background: #ff5e62; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #ff5e62,
+    #ff9966
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #ff5e62,
+    #ff9966
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.gif-bottom {
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.gif-bottom .avatar {
+  margin-right: 5%;
+  border: 1px solid wheat;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  background: black;
+}
+/* ----Loading Icon---- */
+.loading {
+  font-size: 5vw;
+  text-align: center;
+  animation: spin 0.8s linear none infinite;
+  display: inline-block;
+  width: 100%;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .search-bar input {
+    width: 65%;
+  }
+
+  .gif {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
