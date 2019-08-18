@@ -113,14 +113,18 @@ ul {
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 450px) {
   .search-bar input {
-    width: 65%;
+    width: 80%;
   }
 
   .gif {
+    width: 70vw;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+  }
+  .gif img[alt='gif'] {
+    width: 100%;
   }
 }
